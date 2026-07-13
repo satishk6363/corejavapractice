@@ -1,11 +1,12 @@
 package com.arrays;
 
 import java.util.Scanner;
-public class ReverseAnArray2 {
+
+public class ReverseAnArray3 {
 	
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+	Scanner sc = new Scanner(System.in);
 		
 		System.out.println("Enter size of an Array : ");
 		
@@ -33,21 +34,24 @@ public class ReverseAnArray2 {
 		  }
 		  sc.close();
 		
+		
 	}
 	
-	int[] reverseArray(int[] originalarray) {
+	int[] reverseArray(int[] originalArray) {
 		
-		for(int i = 0; i<originalarray.length/2; i++) {
+		int i =0;
+		
+		while(i<originalArray.length/2) {
 			
-			int temp = originalarray[i];
+            int temp = originalArray[i];
 			
-			originalarray[i] = originalarray[originalarray.length-i-1];
+            originalArray[i] = originalArray[originalArray.length-i-1];
 			
-			originalarray[originalarray.length-i-1] = temp;
+            originalArray[originalArray.length-i-1] = temp;
 			
-			
+			i++;
 		}
-		return originalarray;
+		return originalArray;
 	}
 
 }
